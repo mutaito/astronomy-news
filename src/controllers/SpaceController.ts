@@ -1,10 +1,13 @@
 import { Response, Request } from "express";
 import { services } from "../services";
 class SpaceController {
-    public async marsPhotos(req: Request, res: Response){
-        //const result = await services.marsPhotos();
-        //console.log(JSON.stringify(result))
-        //res.send(result);
+    public async marsPhotos(req: Request, res: Response) {
+        const result = await services.marsPhotos();
+        res.render('space/',
+            {
+                items: result.photos
+            }
+        )
     }
 }
 //export default const indexController = new IndexController();
