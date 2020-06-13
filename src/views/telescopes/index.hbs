@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card card-body">
+            <p>Telescopes Section, you can see the telescopes list and also add new item.</p>
+            <a href="/telescopes/add">New Telescope</a>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Serie</th>
+                    <th scope="col">Mount Types</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each telescopes}}
+                <tr>
+                    <td>{{brand}}</td>
+                    <td>{{serie}}</td>
+                    <td>{{mount_types}}</td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</div>
