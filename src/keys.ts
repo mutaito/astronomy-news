@@ -1,5 +1,6 @@
 export const mongodb = {
-    "URI": "mongodb://192.168.1.87:9000/test" 
+    //"URI": "mongodb://192.168.43.147:9000/test"
+    "URI": process.env.MONGO_URL 
 }
 
 export const nasaApi = {

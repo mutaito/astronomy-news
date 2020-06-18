@@ -9,10 +9,15 @@ class MongoDataBase {
     }
 
     async connect(): Promise<void> {
+        console.log("connect····················");
         const db = await mongoose.connect(mongodb.URI, {
             useNewUrlParser: true
         });
-        console.log(db);
+        if (!db) {
+            console.log('Error DB')
+        }else{
+            console.log('Mongo Ok')
+        }
         /*.then((db:any) => {
             //console.log(db);
             console.log('DB is connected');

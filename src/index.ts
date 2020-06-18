@@ -7,7 +7,7 @@ import path from 'path';
 import {about, telescopes, space} from './routes/index';
 
 const app = express();
-//require('./database');
+require('./database');
 
 // SETTINGS
 app.set('port', process.env.PORT || 5000);
