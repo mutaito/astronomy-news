@@ -1,5 +1,5 @@
 export const mongodb = {
-    "URI": "mongodb://localhost/test" 
+    "URI": "mongodb://192.168.1.87:9000/test" 
 }
 
 export const nasaApi = {
