@@ -27,7 +27,7 @@ class Services {
             //body:    JSON.stringify(body),
             headers: { 'Content-Type': 'application/json' },
         };
-        let res = await fetch(nasaApi, options);
+        let res = await fetch(nasaApi.URI, options);
         if (!res.ok) {
             throw new Error('Cant get mars photos')
         }
