@@ -3,13 +3,18 @@ import TelescopeModel, {Telescope} from '../models/Telescope';
 
 class TelescopesController {
     public async index(req: Request, res: Response){
-        const result = await TelescopeModel.find({});
-        const telescopes = result;
-        console.log(telescopes);
-        res.render('telescopes/index', {
-            title: 'Telescopes List',
-            telescopes
-        });
+        try{
+            const result = await TelescopeModel.find({});
+            const telescopes = result;
+            console.log(telescopes);
+            res.render('telescopes/index', {
+                title: 'Telescopes List',
+                telescopes
+            });
+        }catch(e){
+            console.log(e);
+        }
+        
     }
 
     public renderForm(req: Request, res: Response): void {
